@@ -1,78 +1,140 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Trần Minh Đức - Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
   <style>
-    :root {--main-bg:#fff9e6;--main-color:#6d4c41;--accent-color:#f9a825;--text-color:#3e2723;}
-    body.dark-mode {--main-bg:#121212;--main-color:#ffe082;--accent-color:#ffd54f;--text-color:#fffde7;}
-    html {scroll-behavior:smooth;} *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
-    body{font-family:'Poppins',sans-serif;background-color:var(--main-bg);
-      background-image:url("https://www.transparenttextures.com/patterns/geometry.png");
-      background-repeat:repeat;background-size:400px;color:var(--text-color);
-      transition:background-color .5s,color .5s;
+    :root {
+      --main-bg: #fff9e6;
+      --main-color: #6d4c41;
+      --accent-color: #f9a825;
+      --text-color: #3e2723;
     }
-    header{background-color:var(--accent-color);color:var(--text-color);
-      padding:40px 20px;text-align:center;
+    body.dark-mode {
+      --main-bg: #121212;
+      --main-color: #ffe082;
+      --accent-color: #ffd54f;
+      --text-color: #fffde7;
     }
-    header img{width:150px;height:150px;border-radius:50%;
-      border:5px solid white;margin-bottom:15px;object-fit:cover;
-      box-shadow:0 4px 15px rgba(0,0,0,.15);
+    html { scroll-behavior: smooth; }
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family:'Poppins', sans-serif;
+      background-color: var(--main-bg);
+      background-image: url("https://www.transparenttextures.com/patterns/geometry.png");
+      background-repeat: repeat;
+      background-size:400px;
+      color: var(--text-color);
+      transition: background-color .5s, color .5s;
     }
-    header h1{font-size:2.4em;font-weight:600;}
-    header p#slogan{font-size:1.1em;margin:10px 0;font-style:italic;
+    header {
+      background-color: var(--accent-color);
+      color: var(--text-color);
+      padding:40px 20px;
+      text-align:center;
+    }
+    header img {
+      width:150px; height:150px;
+      border-radius:50%;
+      border:5px solid white;
+      margin-bottom:15px;
+      object-fit:cover;
+      box-shadow:0 4px 15px rgba(0,0,0,0.15);
+    }
+    header h1 { font-size:2.4em; font-weight:600; }
+    header p#slogan {
+      font-size:1.1em;
+      margin:10px 0;
+      font-style:italic;
       transition:opacity .6s ease;
     }
-    .btn-group{margin-top:15px;}
-    .btn{padding:10px 20px;background:var(--main-color);color:white;
-      border:none;border-radius:5px;cursor:pointer;margin:5px;
-      transition:background .3s,transform .3s;display:inline-block;
+    .btn-group { margin-top:15px; }
+    .btn {
+      padding:10px 20px;
+      background: var(--main-color);
+      color:white;
+      border:none;
+      border-radius:5px;
+      cursor:pointer;
+      margin:5px;
+      transition: background .3s, transform .3s;
+      display:inline-block;
       text-decoration:none;
     }
-    .btn:hover{background:#5d4037;transform:scale(1.05);}
-    main{max-width:900px;margin:40px auto;padding:0 20px;}
-    section{margin-bottom:50px;opacity:0;
+    .btn:hover { background:#5d4037; transform:scale(1.05); }
+    main {
+      max-width:900px;
+      margin:40px auto;
+      padding:0 20px;
+    }
+    section {
+      margin-bottom:50px;
+      opacity:0;
       transform:translateY(40px);
       animation:slideIn 1s ease-out forwards;
     }
-    h2{font-size:1.8em;color:var(--main-color);
+    h2 {
+      font-size:1.8em;
+      color: var(--main-color);
       border-left:5px solid var(--accent-color);
-      padding-left:10px;margin-bottom:20px;
+      padding-left:10px;
+      margin-bottom:20px;
     }
-    .intro{font-size:1.05em;line-height:1.6;}
-    .skills .skill{margin-bottom:15px;}
-    .skill-name{font-weight:600;}
-    .bar{background:#ddd;border-radius:20px;overflow:hidden;}
-    .bar-fill{background:var(--accent-color);height:20px;
-      text-align:right;padding-right:10px;color:white;
+    .intro { font-size:1.05em; line-height:1.6; }
+    .skills .skill { margin-bottom:15px; }
+    .skill-name { font-weight:600; }
+    .bar {
+      background:#ddd;
+      border-radius:20px;
+      overflow:hidden;
+    }
+    .bar-fill {
+      background: var(--accent-color);
+      height:20px;
+      text-align:right;
+      padding-right:10px;
+      color:white;
       line-height:20px;
     }
-    .contact a{margin-right:15px;color:var(--main-color);
-      font-weight:bold;text-decoration:none;
+    .contact a {
+      margin-right:15px;
+      color: var(--main-color);
+      font-weight:bold;
+      text-decoration:none;
     }
-    blockquote{font-style:italic;color:var(--main-color);
+    blockquote {
+      font-style:italic;
+      color: var(--main-color);
       border-left:4px solid var(--accent-color);
-      padding-left:15px;margin:20px 0;
+      padding-left:15px;
+      margin:20px 0;
     }
-    footer{text-align:center;padding:20px;background:#fff3cd;
+    footer {
+      text-align:center;
+      padding:20px;
+      background:#fff3cd;
       font-size:0.9em;
     }
-    @keyframes slideIn{to{opacity:1;transform:translateY(0);}}
+    @keyframes slideIn {
+      to { opacity:1; transform:translateY(0);}
+    }
     @media(max-width:600px){
-      header{padding:20px 10px;}
-      header img{width:100px;height:100px;border-width:3px;margin-bottom:10px;}
-      header h1{font-size:1.6em;}
-      header p#slogan{font-size:0.9em;margin:8px 0;}
-      .btn{width:90%;max-width:300px;margin:8px 0;font-size:1em;padding:12px 0;}
+      header { padding:20px 10px; }
+      header img {
+        width:100px; height:100px; border-width:3px; margin-bottom:10px;
+      }
+      header h1 { font-size:1.6em; }
+      header p#slogan { font-size:0.9em; margin:8px 0; }
+      .btn { width:90%; max-width:300px; margin:8px 0; font-size:1em; padding:12px 0; }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <img src="https://api.dicebear.com/9.x/avataaars-neutral/svg?seed=tranminhduc&backgroundType=gradientLinear" alt="Ảnh đại diện nghiêm túc">
+  <img src="https://api.dicebear.com/7.x/personas/svg?seed=tranminhduc&backgroundColor=b6e3f4" alt="Ảnh đại diện nghiêm túc">
   <h1>Trần Minh Đức</h1>
   <p id="slogan">Mỗi dòng code là một bước tiến tới tương lai</p>
   <div class="btn-group">
@@ -83,37 +145,94 @@
 </header>
 
 <main>
-  <section><h2>👋 Giới thiệu</h2>
+  <section>
+    <h2>👋 Giới thiệu</h2>
     <p class="intro">
-      Xin chào! Tôi là sinh viên năm nhất ngành Công nghệ Thông tin...
+      Xin chào! Tôi là sinh viên năm nhất ngành Công nghệ Thông tin (hệ đào tạo từ xa) tại Trường Đại học Đại Nam.  
+      Tôi yêu thích phát triển web, đặc biệt UI/UX và Front‑end. Luôn học hỏi và thực hành trong các dự án thực tế.
     </p>
   </section>
-  <section class="skills"><h2>🛠 Kỹ năng</h2>
-    <!-- ... giữ nguyên nội dung kỹ năng -->
+
+  <section class="skills">
+    <h2>🛠 Kỹ năng</h2>
+    <div class="skill"><div class="skill-name">HTML/CSS</div><div class="bar"><div class="bar-fill" style="width:90%">90%</div></div></div>
+    <div class="skill"><div class="skill-name">JavaScript</div><div class="bar"><div class="bar-fill" style="width:75%">75%</div></div></div>
+    <div class="skill"><div class="skill-name">Python</div><div class="bar"><div class="bar-fill" style="width:70%">70%</div></div></div>
+    <div class="skill"><div class="skill-name">Git & GitHub</div><div class="bar"><div class="bar-fill" style="width:85%">85%</div></div></div>
+  </section>
+
+  <section>
+    <h2>🎯 Mục tiêu nghề nghiệp</h2>
+    <ul>
+      <li>🌱 Làm chủ React, TailwindCSS và TypeScript</li>
+      <li>📈 Tham gia 3+ dự án thực tế (team hoặc cá nhân)</li>
+      <li>🧠 Không ngừng cập nhật xu hướng công nghệ mới</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>💎 Giá trị tôi mang lại</h2>
+    <p>
+      Tôi không chỉ viết code chạy, mà còn chú trọng trải nghiệm người dùng, chi tiết và giao tiếp hiệu quả trong nhóm.
+    </p>
+  </section>
+
+  <section>
+    <h2>💼 Phong cách làm việc</h2>
+    <ul>
+      <li>🚀 Chủ động, sáng tạo, không ngừng cải thiện</li>
+      <li>📚 Áp dụng nhanh khi học kiến thức mới</li>
+      <li>🤝 Ưa thích làm việc nhóm rõ ràng và hiệu quả</li>
+      <li>🧩 Tập trung chi tiết, đặc biệt UI/UX</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🌟 Châm ngôn sống</h2>
+    <blockquote>
+      “Không cần giỏi ngay từ đầu, chỉ cần bắt đầu để trở nên giỏi.”
+    </blockquote>
+  </section>
+
+  <section>
+    <h2>📬 Liên hệ</h2>
+    <p class="contact">
+      📧 <a href="mailto:tranminhduc018241@gmail.com">tranminhduc018241@gmail.com</a><br>
+      💼 <a href="https://www.linkedin.com/in/tranminhduc" target="_blank">LinkedIn</a><br>
+      🌐 <a href="https://github.com/tranminhduc" target="_blank">GitHub</a>
+    </p>
   </section>
 </main>
 
 <footer>© 2025 Trần Minh Đức. All rights reserved.</footer>
 
 <script>
-  const slogans = ["Mỗi dòng code...", "Học hỏi...", "Từ ý tưởng...", "Chinh phục công nghệ..."];
-  let index=0;
-  function changeSlogan(){
-    const el=document.getElementById('slogan');
-    el.style.opacity=0;
-    setTimeout(()=>{ index=(index+1)%slogans.length;
-      el.textContent=slogans[index];
-      el.style.opacity=1;
-    },500);
+  const slogans = [
+    "Mỗi dòng code là một bước tiến tới tương lai",
+    "Học hỏi mỗi ngày, sáng tạo không ngừng",
+    "Từ ý tưởng đến hiện thực bằng bàn phím và đam mê",
+    "Chinh phục công nghệ, xây dựng giấc mơ"
+  ];
+  let index = 0;
+  function changeSlogan() {
+    const el = document.getElementById('slogan');
+    el.style.opacity = 0;
+    setTimeout(() => {
+      index = (index + 1) % slogans.length;
+      el.textContent = slogans[index];
+      el.style.opacity = 1;
+    }, 500);
   }
-  function toggleDarkMode(){
+  function toggleDarkMode() {
     document.body.classList.toggle('dark-mode');
     localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
   }
-  document.addEventListener('DOMContentLoaded',()=>{
-    if(localStorage.getItem('darkMode')==='true')
+  document.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('darkMode') === 'true') {
       document.body.classList.add('dark-mode');
+    }
   });
 </script>
+
 </body>
 </html>
